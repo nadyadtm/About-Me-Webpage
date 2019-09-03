@@ -2,8 +2,10 @@
 <html>
 <head>
 	<title>Biodata Diri</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<style type="text/css">
 		body {
+			font-family: 'Roboto', sans-serif;
 			margin:0;
 		}		
 		.container{
@@ -14,21 +16,36 @@
 			width: 100%;
 			height: 50px;
 			background-color: #C97171;
+			opacity: 0.8;
 		}
 		.content-outer{
 			min-height: 500px;
 		}
-		.content{
-			width: 900px;
-			min-height: 500px;
+		#content{
+			width: 80%;
+			min-height: 100%;
 			background-color: #FFFFFF;
 		    position: relative;
 		    margin: 90px auto;
+		    text-align: center;
+		}
+		#content2{
+			width: 80%;
+			min-height: 100%;
+			background-color: #FFFFFF;
+		    position: relative;
+		    margin: 90px auto;
+		    text-align: center;
+		    display: none;
 		}
 		.Footer{
 			width: 100%;
-			height: 50px;
-			background-color: #000000;
+			height: 40px;
+			background-color: #C4C4C4;
+		}
+		.Footer p{
+			text-align: center;
+			padding: 10px;
 		}
 		.Navigation ul{
 			margin: center;
@@ -41,10 +58,41 @@
 		.Navigation ul li a{
 			padding: 16px;
 			text-decoration: none;
-			color: black;
+			color: white;
+			cursor: pointer;
 		}
 		.Navigation ul li a:hover{
-			color: hotpink;
+			text-decoration: underline;
+		}
+		.desc{
+			position: relative;
+			padding-top: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 30px;
+			background-color: #FFE1E1;
+		}
+		.desc img{
+			border-radius: 50%
+		}
+		.personal-info{
+			padding-bottom: 30px;
+		}
+		.personal-info table{
+			margin: auto;
+			width: 600px;
+		}
+		td{
+			text-align: left;
+			vertical-align: top;
+			padding-left: 100px;
+			padding-bottom: 10px;
+		}
+		.social-media{
+			padding-bottom: 30px;
+		}
+		.social-media div img{
+			padding: 10px;
 		}
 	</style>
 </head>
@@ -53,21 +101,62 @@
 		<div class="Header">
 			<div class="Navigation">
 				<ul>
-					<li><a href="#">About Me</a></li>
-					<li><a href="#">Education</a></li>
+					<li><a onclick="show('content')">About Me</a></li>
+					<li><a onclick="show('content2')">Education</a></li>
 					<li><a href="#">Experience</a></li>
 					<li><a href="#">Skills</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="content-outer">
-			<div class="content">
-				<img src="">
+			<div id ="content">
+				<div class="desc">
+					<img src="fotodiri.png">
+					<h1>Nadya Aditama</h1>
+					<p>Fresh Graduate from Telkom University</p>
+					<p>My name is Nadya Aditama. I have some interest in Machine Learning, especially Computer Vision and Data Science. I currently learn Android Studio and Java Programming, and also I try to learn python as well. I love to study a new thing. </p>
+				</div>
+				<div class="personal-info">
+					<h1>Personal Information</h1>
+					<table>
+						<tr>
+							<td>Birthday</td>
+							<td>17th September</td>
+						</tr>
+						<tr>
+							<td>Address</td>
+							<td>Kompleks Antapani Regency No B2, Bandung City, West Java.</td>
+						</tr>
+						<tr>
+							<td>Phone</td>
+							<td>082125706247</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>nadya.aditama@gmail.com</td>
+						</tr>
+					</table>
+				</div>
+				<div class="social-media">
+					<h1>Find Me in</h1>	
+					<div>
+						<a href=""><img src="iconmonstr-linkedin-3.png"></a>
+						<a href=""><img src="github-logo.png"></a>
+					</div>
+				</div>
+			</div>
+			<div id="content2">
+				<h1>Test</h1>
 			</div>
 		</div>
 		<div class="Footer">
-			
+			<p>copyright 2019 - Nadya Aditama</p>
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+	function show(param_div_id) {
+    	document.getElementById('content').innerHTML = document.getElementById(param_div_id).innerHTML;
+  	}
+</script>
 </html>
