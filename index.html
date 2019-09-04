@@ -7,10 +7,15 @@
 		body {
 			font-family: 'Roboto', sans-serif;
 			margin:0;
+			line-height: 1.5em;
 		}		
+		h1{
+			font-weight: lighter;
+		}
 		.container{
 			margin:0;
 			background-color: #AAAAAA;
+			background-image: url("Coffee-At-Work-Wallpaper.jpg");
 		 }
 		.Header{
 			width: 100%;
@@ -21,7 +26,7 @@
 		.content-outer{
 			min-height: 500px;
 		}
-		#content{
+		#main-content{
 			width: 80%;
 			min-height: 100%;
 			background-color: #FFFFFF;
@@ -36,6 +41,50 @@
 		    position: relative;
 		    margin: 90px auto;
 		    text-align: center;
+		    display: none;
+		}
+		.education{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.experience{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.education table{
+			margin: auto;
+			width: 70%;
+		}
+		.experience table{
+			margin: auto;
+			width: 80%;
+		}
+		#content3{
+			width: 80%;
+			min-height: 100%;
+			background-color: #FFFFFF;
+		    position: relative;
+		    margin: 90px auto;
+		    text-align: center;
+		    display: none;
+		}
+		#content4{
+			width: 80%;
+			min-height: 100%;
+			background-color: #FFFFFF;
+		    position: relative;
+		    margin: 90px auto;
+		    text-align: center;
+		    display: none;
+		}
+		#content5{
+			width: 80%;
+			min-height: 100%;
+			background-color: #FFFFFF;
+		    margin: 90px auto;
+		    text-align: center;
+		    position: relative;
 		    display: none;
 		}
 		.Footer{
@@ -85,7 +134,7 @@
 		td{
 			text-align: left;
 			vertical-align: top;
-			padding-left: 100px;
+			padding-left: 80px;
 			padding-bottom: 10px;
 		}
 		.social-media{
@@ -94,6 +143,22 @@
 		.social-media div img{
 			padding: 10px;
 		}
+		.thumbnail{
+			background-color: white;
+			text-align: center;
+			padding: 10px;
+		}
+		.skills{
+			padding-top: 20px;
+			padding-bottom: 30px;
+		}
+		.ket{
+			font-weight: bold;
+		}
+		.tahun{
+			font-size: 20px;
+			font-weight: lighter;
+		}
 	</style>
 </head>
 <body>
@@ -101,15 +166,15 @@
 		<div class="Header">
 			<div class="Navigation">
 				<ul>
-					<li><a onclick="show('content')">About Me</a></li>
+					<li><a onclick="show('content4')">About Me</a></li>
 					<li><a onclick="show('content2')">Education</a></li>
-					<li><a href="#">Experience</a></li>
-					<li><a href="#">Skills</a></li>
+					<li><a onclick="show('content3')">Experience</a></li>
+					<li><a onclick="show('content5')">Skills</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="content-outer">
-			<div id ="content">
+			<div id ="main-content">
 				<div class="desc">
 					<img src="fotodiri.png">
 					<h1>Nadya Aditama</h1>
@@ -120,19 +185,19 @@
 					<h1>Personal Information</h1>
 					<table>
 						<tr>
-							<td>Birthday</td>
+							<td class="ket">Birthday</td>
 							<td>17th September</td>
 						</tr>
 						<tr>
-							<td>Address</td>
+							<td class="ket">Address</td>
 							<td>Kompleks Antapani Regency No B2, Bandung City, West Java.</td>
 						</tr>
 						<tr>
-							<td>Phone</td>
+							<td class="ket">Phone</td>
 							<td>082125706247</td>
 						</tr>
 						<tr>
-							<td>Email</td>
+							<td class="ket">Email</td>
 							<td>nadya.aditama@gmail.com</td>
 						</tr>
 					</table>
@@ -140,13 +205,112 @@
 				<div class="social-media">
 					<h1>Find Me in</h1>	
 					<div>
-						<a href=""><img src="iconmonstr-linkedin-3.png"></a>
-						<a href=""><img src="github-logo.png"></a>
+						<a href="https://www.linkedin.com/in/nadyadtm17/"><img src="iconmonstr-linkedin-3.png"></a>
+						<a href="https://github.com/nadyadtm"><img src="github-logo.png"></a>
 					</div>
 				</div>
 			</div>
 			<div id="content2">
-				<h1>Test</h1>
+				<div class="education">
+					<h1>Education</h1>
+					<table style="padding-top: 20px">
+						<tr class="tahun">
+							<td rowspan="2">2012-2015</td>
+							<td>President Senior High School</td>
+						</tr>
+						<tr>
+							<td>Natural Science</td>
+						</tr>
+						<tr class="tahun">
+							<td rowspan="2">2015-2019</td>
+							<td>Telkom University</td>
+						</tr>
+						<tr>
+							<td>Bachelor of Informatics</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="content3">
+				<div class="experience">
+					<h1>Experience</h1>
+					<table style="padding-top: 20px">
+						<tr class="tahun">
+							<td rowspan="2">2017</td>
+							<td>Data Structure Lab Work Assistant</td>
+						</tr>
+						<tr>
+							<td>Responsible to manage the practicum and grade the assignment</td>
+						</tr>
+						<tr class="tahun">
+							<td rowspan="2">2017</td>
+							<td>Object Oriented Programming Lab Work Assistant</td>
+						</tr>
+						<tr>
+							<td>Responsible to manage the practicum and grade the assignment</td>
+						</tr>
+						<tr class="tahun">
+							<td rowspan="2">2019</td>
+							<td>Machine Learning Assistant Lecturer</td>
+						</tr>
+						<tr>
+							<td>Responsible to grade the machine learning assignment</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="content4">
+				<div class="desc">
+					<img src="fotodiri.png">
+					<h1>Nadya Aditama</h1>
+					<p>Fresh Graduate from Telkom University</p>
+					<p>My name is Nadya Aditama. I have some interest in Machine Learning, especially Computer Vision and Data Science. I currently learn Android Studio and Java Programming, and also I try to learn python as well. I love to study a new thing. </p>
+				</div>
+				<div class="personal-info">
+					<h1>Personal Information</h1>
+					<table>
+						<tr>
+							<td class="ket">Birthday</td>
+							<td>17th September</td>
+						</tr>
+						<tr>
+							<td class="ket">Address</td>
+							<td>Kompleks Antapani Regency No B2, Bandung City, West Java.</td>
+						</tr>
+						<tr>
+							<td class="ket">Phone</td>
+							<td>082125706247</td>
+						</tr>
+						<tr>
+							<td class="ket">Email</td>
+							<td>nadya.aditama@gmail.com</td>
+						</tr>
+					</table>
+				</div>
+				<div class="social-media">
+					<h1>Find Me in</h1>	
+					<div>
+						<a href="https://www.linkedin.com/in/nadyadtm17/"><img src="iconmonstr-linkedin-3.png"></a>
+						<a href="https://github.com/nadyadtm"><img src="github-logo.png"></a>
+					</div>
+				</div>
+			</div>
+			<div id="content5">
+				<div class="skills">
+					<h1>Skills</h1>
+					 <div class="thumbnail">
+					 	 <img src="70.png">
+	        			<p>Java</p>
+	    			</div>
+	    			<div class="thumbnail">
+	        			<img src="60.png">
+	        			<p>Python</p>
+	    			</div>
+	    			<div class="thumbnail">
+	        			<img src="80.png">
+	        			<p>Matlab</p>
+	        		</div>
+				</div>
 			</div>
 		</div>
 		<div class="Footer">
@@ -156,7 +320,7 @@
 </body>
 <script type="text/javascript">
 	function show(param_div_id) {
-    	document.getElementById('content').innerHTML = document.getElementById(param_div_id).innerHTML;
+    	document.getElementById('main-content').innerHTML = document.getElementById(param_div_id).innerHTML;
   	}
 </script>
 </html>
